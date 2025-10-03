@@ -1,16 +1,16 @@
 button {
-  width: 10rem;
-  height: 2.8rem;
+  min-width: 10rem;
+  min-height: 2.8rem;
   border-radius: 0.7rem;
   border: none;
   background-color: var(--site-boton);
   color: var(--site-blue-600);
   font-weight: bold;
   cursor: pointer;
+  font-size: var(--step-0);
+  transition: background 1s;
 }
 
 button:hover {
-  width: 10.5rem;
-  height: 3rem;
-  transition: background 1s, width 0.5s ease-in, height 0.5s ease-in;
+  background-color: var(--site-boton-hover);
 }

@@ -11,6 +11,7 @@ const Lista_tareas = ({ agregar }) => {
   return (
     <div>
       <h1>Lista de tareas</h1>
+      <br />
       <section className="contenedor-botones">
         <Boton OnClick={agregar} tituloBoton="Agregar tarea" />
         <br />

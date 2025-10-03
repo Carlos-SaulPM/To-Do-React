@@ -21,7 +21,7 @@
 
 .navlink-radio:hover,
 .radio-label:hover {
-  background-color: #c1feda;
+  background-color: var(--site-boton-hover);
 }
 
 .radio-label {
