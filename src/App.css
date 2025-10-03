@@ -1,0 +1,15 @@
+header {
+  width: 100%;
+  grid-area: header;
+  background-color: var(--site-blue-600);
+  color: white;
+}
+
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  background-color: var(--site-blue-900);
+  color: white;
+}

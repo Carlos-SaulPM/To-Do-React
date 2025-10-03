@@ -1,0 +1,15 @@
+.grupo-radio {
+  display: flex;
+}
+
+.grupo-radio .radio-label:first-of-type {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.grupo-radio .radio-label:last-of-type {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.grupo-radio label:nth-child(even):not(.grupo-radio .radio-label:last-of-type) {
+  border-right: none;
+}
