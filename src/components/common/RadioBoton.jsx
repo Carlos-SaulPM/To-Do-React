@@ -1,5 +1,5 @@
 import React from "react";
-import "./radioBoton.css"; // estilos separados para claridad
+import "./radioBoton.css";
 
 const RadioBoton = ({ nameRadioBoton = "categoria", value, label }) => {
   return (

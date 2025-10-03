@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
 
-const home = () => {
+const RootLayout = () => {
   return (
     <>
       <header>
@@ -17,4 +17,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default RootLayout;

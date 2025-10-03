@@ -1,12 +1,12 @@
-import Boton from "../components/Boton";
-import RadioBoton from "../components/RadioBoton";
-import Buscador from "../components/Buscador";
+import Boton from "../components/common/Boton";
+import RadioBoton from "../components/common/RadioBoton";
+import Buscador from "../components/common/Buscador";
 import "./lista_tareas.css";
+import { NavLink } from "react-router";
 
-const Lista_tareas = () => {
-  const agregar = () => {
-    console.log("Agregando");
-  };
+const Lista_tareas = ({ agregar }) => {
+  let navLinkActivo = ({ isActive }) =>
+    `navlink-radio centrar-flex ${isActive ? "radio-label-checked" : ""}`;
 
   return (
     <div>
@@ -15,23 +15,31 @@ const Lista_tareas = () => {
         <Boton OnClick={agregar} tituloBoton="Agregar tarea" />
         <br />
         <br />
-        <div className="grupo-radio">
-          <RadioBoton nameRadioBoton="tareas" value="todos" label="Todos" />
-          <RadioBoton
-            nameRadioBoton="tareas"
-            value="por_hacer"
-            label="Por hacer"
-          />
-          <RadioBoton
-            nameRadioBoton="tareas"
-            value="en_proceso"
-            label="En proceso"
-          />
-          <RadioBoton
-            nameRadioBoton="tareas"
-            value="finalizadas"
-            label="Finalizadas"
-          />
+        <div className="contenedor-radio">
+          <NavLink to="/" className={navLinkActivo}>
+            <RadioBoton nameRadioBoton="tareas" value="todos" label="Todos" />
+          </NavLink>
+          <NavLink to="por-hacer" className={navLinkActivo}>
+            <RadioBoton
+              nameRadioBoton="tareas"
+              value="por_hacer"
+              label="Por hacer"
+            />
+          </NavLink>
+          <NavLink to="en-proceso" className={navLinkActivo}>
+            <RadioBoton
+              nameRadioBoton="tareas"
+              value="en_proceso"
+              label="En proceso"
+            />
+          </NavLink>
+          <NavLink to="finalizadas" className={navLinkActivo}>
+            <RadioBoton
+              nameRadioBoton="tareas"
+              value="finalizadas"
+              label="Finalizadas"
+            />
+          </NavLink>
         </div>
         <br />
         <br />
