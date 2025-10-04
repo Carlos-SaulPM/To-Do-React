@@ -15,7 +15,7 @@
 .navlink-radio {
   text-decoration: none;
   border: medium solid var(--site-blue-600);
-  transition: background 0.4s ease;
+  transition: background 0.3s ease;
   padding: 0.1rem;
 }
 
