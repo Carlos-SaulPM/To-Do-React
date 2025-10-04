@@ -1,0 +1,42 @@
+.contenedor-radio {
+  display: flex;
+}
+.navlink-radio:first-child {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.navlink-radio:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.navlink-radio:not(.navlink-radio:last-child) {
+  border-right: none;
+}
+
+.navlink-radio {
+  text-decoration: none;
+  border: medium solid var(--site-blue-600);
+  transition: background 0.3s ease;
+  padding: 0.1rem;
+}
+
+.navlink-radio:hover,
+.radio-label:hover {
+  background-color: var(--site-boton-hover);
+}
+
+.radio-label {
+  border: none;
+  transition: inherit;
+}
+
+.radio-label-checked .radio-label,
+.radio-label-checked,
+.radio-label-checked:hover {
+  background-color: var(--site-boton);
+}
+
+.centrar-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
