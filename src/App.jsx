@@ -19,7 +19,7 @@ function App() {
               }
             ></Route>
             <Route
-              path="por-hacer"
+              path="por_hacer"
               element={
                 <>
                   <h2>Por hacer</h2>
@@ -27,7 +27,7 @@ function App() {
               }
             ></Route>
             <Route
-              path="en-proceso"
+              path="en_proceso"
               element={
                 <>
                   <h2>En proceso</h2>

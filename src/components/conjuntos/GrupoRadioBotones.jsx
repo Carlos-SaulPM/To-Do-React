@@ -10,13 +10,13 @@ const GrupoRadioBotones = ({ rutas, name }) => {
       {Object.entries(rutas).map(([ruta, propiedadDelLabel], index) => {
         return (
           <NavLink
-            to={propiedadDelLabel.path ? propiedadDelLabel.path : ruta}
+            to={propiedadDelLabel.path || ruta}
             className={navLinkActivo}
             key={index}
           >
             <RadioBoton
               nameRadioBoton={name}
-              value={propiedadDelLabel.value}
+              value={ruta}
               label={propiedadDelLabel.label}
             />
           </NavLink>
