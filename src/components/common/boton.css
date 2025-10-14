@@ -12,5 +12,5 @@ button {
 }
 
 button:hover {
-  background-color: var(--site-boton-hover);
+  background-color: var(--site-boton-hover-green);
 }

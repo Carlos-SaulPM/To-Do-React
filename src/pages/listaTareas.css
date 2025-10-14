@@ -1,0 +1,18 @@
+h1 {
+  padding-bottom: 2rem;
+}
+
+.contenedor-botones {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-botones form {
+  display: flex;
+  align-items: center;
+}
+.contenedor-radio {
+  padding-top: 2rem;
+}

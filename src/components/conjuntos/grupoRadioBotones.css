@@ -21,7 +21,7 @@
 
 .navlink-radio:hover,
 .radio-label:hover {
-  background-color: var(--site-boton-hover);
+  background-color: var(--site-boton-hover-blue);
 }
 
 .radio-label {
@@ -32,7 +32,8 @@
 .radio-label-checked .radio-label,
 .radio-label-checked,
 .radio-label-checked:hover {
-  background-color: var(--site-boton);
+  background-color: var(--site-blue-600);
+  color: white;
 }
 
 .centrar-flex {

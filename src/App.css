@@ -7,7 +7,8 @@ header {
 
 main {
   grid-area: main;
-  background-color: #f8fbff;
+  background-color: #f9fcff;
+  padding-top: 2rem;
 }
 footer {
   grid-area: footer;

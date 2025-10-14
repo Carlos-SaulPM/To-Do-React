@@ -1,21 +1,11 @@
-import React from "react";
+import "./buscador.css";
 
 const Buscador = ({ name, OnSubmit }) => {
-  const stylesBarraBusqueda = {
-    borderRadius: "0.4rem",
-    width: "20rem",
-    height: "2.5rem",
-    fontSize: "var(--step-0)",
-  };
-  const botonBusqueda = {
-    fontSize: "var(--step-0)",
-    width: "7rem",
-    maxHeight: "2rem",
-    marginLeft: "2rem",
-  };
+  const stylesBarraBusqueda = {};
+  const botonBusqueda = {};
 
   return (
-    <form onSubmit={OnSubmit}>
+    <form onSubmit={OnSubmit} className="buscador">
       <input
         type="search"
         style={stylesBarraBusqueda}

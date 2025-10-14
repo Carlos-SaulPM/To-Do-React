@@ -1,0 +1,38 @@
+table {
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+  border-collapse: collapse;
+}
+thead {
+  height: 3rem;
+  background-color: var(--site-blue-400);
+  color: white;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 0.7rem 0;
+}
+
+tbody tr {
+  background-color: white;
+}
+tbody tr:nth-child(even) {
+  background-color: var(--site-blue-100);
+}
+
+.icon-trash {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-image: url("/src/assets/icons8-basura.svg");
+  background-size: contain;
+}
+.icon-pencil {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-image: url("/src/assets/pencil.svg");
+  background-size: contain;
+}

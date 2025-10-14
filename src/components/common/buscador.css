@@ -1,0 +1,17 @@
+.buscador {
+  display: flex;
+  width: max-content;
+  gap: 2rem;
+}
+
+.buscador input[type="search"] {
+  border-radius: 0.4rem;
+  width: 20rem;
+  height: 2.5rem;
+  font-size: var(--step-0);
+}
+.buscador input[type="submit"] {
+  font-size: var(--step-0);
+  width: 7rem;
+  max-height: 2rem;
+}

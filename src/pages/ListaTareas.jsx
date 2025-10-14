@@ -26,17 +26,14 @@ const ListaTareas = ({ agregar }) => {
 
   return (
     <div>
+      <br />
       <h1>Lista de tareas</h1>
       <br />
       <section className="contenedor-botones">
         <Boton OnClick={agregar} tituloBoton="Agregar tarea" />
-        <br />
-        <br />
-        <GrupoRadioBotones rutas={rutasNav} name="tareas" />
-        <br />
-        <br />
         <Buscador />
       </section>
+      <GrupoRadioBotones rutas={rutasNav} name="tareas" />
     </div>
   );
 };
