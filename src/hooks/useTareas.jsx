@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const dbLocalEjemplo = [
+const tareasLocales = [
   {
     id: 1,
     titulo: "Esto es un titulo",
@@ -20,25 +20,25 @@ const dbLocalEjemplo = [
     estado: "Finalizada",
   },
 ];
-export const useTable = (dbExterna) => {
-  const [dbLocal, setDbLocal] = useState(dbLocalEjemplo);
-  const [data, setData] = useState([]);
+export const useTareas = (dbExterna) => {
+  const [tareas, setTareas] = useState(tareasLocales);
+  const [tareasFiltradas, setTareasFiltradas] = useState([]);
 
   useEffect(() => {
-    if (dbExterna) setDbLocal(dbExterna);
+    if (dbExterna) setTareas(dbExterna);
   }, [dbExterna]);
 
-  const filtrarDataPorEstado = (estado) => {
+  const filtrarTareasPorEstado = (estado) => {
     if (estado === "todos" || !estado) {
-      setData(dbLocal);
+      setTareasFiltradas(tareas);
     } else {
-      setData(filtrarDb(estado, dbLocal));
+      setTareasFiltradas(filtrarTareas(estado, tareas));
     }
   };
 
-  return [data, filtrarDataPorEstado];
+  return [tareasFiltradas, filtrarTareasPorEstado];
 };
 
 //Aux para filtrar las tareas de la base de datos
-let filtrarDb = (estadoDeTareasABuscar, arrayDeDatos) =>
+let filtrarTareas = (estadoDeTareasABuscar, arrayDeDatos) =>
   arrayDeDatos.filter((el) => el.estado === estadoDeTareasABuscar);

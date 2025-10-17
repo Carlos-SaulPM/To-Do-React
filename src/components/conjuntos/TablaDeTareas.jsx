@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import FilaTabla from "../common/FilaTabla";
 import "./tablaDeTareas.css";
-import { useTable } from "../../hooks/useTable";
+import { useTareas } from "../../hooks/useTareas";
 import { useParams } from "react-router";
 
 const estadosDeTareas = {
@@ -11,12 +11,12 @@ const estadosDeTareas = {
 };
 
 const TablaDeTareas = () => {
-  const [data, filtrarDataPorEstado] = useTable();
+  const [tareasFiltradas, filtrarTareasPorEstado] = useTareas();
   const { estado } = useParams();
 
   useEffect(() => {
     const estadoFiltrado = !estado ? "todos" : estadosDeTareas[estado];
-    filtrarDataPorEstado(estadoFiltrado);
+    filtrarTareasPorEstado(estadoFiltrado);
   }, [estado]);
 
   return (
@@ -28,11 +28,11 @@ const TablaDeTareas = () => {
             <th>Título</th>
             <th>Descripción</th>
             <th>Estado</th>
-            <th colSpan={2}>Acciones</th>
+            <th colSpan={3}>Acciones</th>
           </tr>
         </thead>
         <tbody>
-          {data.map((tarea, index) => (
+          {tareasFiltradas.map((tarea, index) => (
             <FilaTabla tarea={tarea} key={index} />
           ))}
         </tbody>

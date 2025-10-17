@@ -22,17 +22,20 @@ tbody tr:nth-child(even) {
   background-color: var(--site-blue-100);
 }
 
-.icon-trash {
+.icon {
   display: inline-block;
   height: 30px;
   width: 30px;
-  background-image: url("/src/assets/icons8-basura.svg");
   background-size: contain;
 }
+
+.icon-trash {
+  background-image: url("/src/assets/icons8-basura.svg");
+}
 .icon-pencil {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
   background-image: url("/src/assets/pencil.svg");
-  background-size: contain;
+}
+
+.icon-check {
+  background-image: url("/src/assets/check.svg");
 }
