@@ -3,49 +3,26 @@ import "normalize.css";
 import { Routes, Route } from "react-router";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./routes/Home";
-import Tabla from "./components/conjuntos/Tabla";
+import TablaDeTareas from "./components/conjuntos/TablaDeTareas";
 
 function App() {
+  let tablaTareas = <TablaDeTareas />; //Utilizando la misma referencia para las subrutas "/".
   return (
     <>
       <Routes>
         <Route element={<RootLayout />}>
           <Route path="/" element={<Home />}>
-            <Route element={<Tabla />}>
-              <Route
-                index
-                element={
-                  <>
-                    <h2>todos</h2>
-                  </>
-                }
-              ></Route>
-              <Route
-                path="por_hacer"
-                element={
-                  <>
-                    <h2>Por hacer</h2>
-                  </>
-                }
-              ></Route>
-              <Route
-                path="en_proceso"
-                element={
-                  <>
-                    <h2>En proceso</h2>
-                  </>
-                }
-              ></Route>
-              <Route
-                path="finalizadas"
-                element={
-                  <>
-                    <h2>Finalizadas</h2>
-                  </>
-                }
-              ></Route>
-            </Route>
+            <Route index element={tablaTareas} />
+            <Route path=":estado" element={tablaTareas} />
           </Route>
+          <Route
+            path="/agregar"
+            element={
+              <>
+                <h3>Agregando tarea</h3>
+              </>
+            }
+          ></Route>
         </Route>
       </Routes>
     </>

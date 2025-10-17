@@ -1,13 +1,14 @@
 import { NavLink } from "react-router";
 
 NavLink;
-const FilaTabla = () => {
+const FilaTabla = ({ tarea }) => {
+  const { id, titulo, descripcion, estado } = tarea;
   return (
     <tr>
-      <td>1</td>
-      <td>Prueba de tarea</td>
-      <td>Descripción de prueba</td>
-      <td>Estado</td>
+      <td>{id}</td>
+      <td>{titulo}</td>
+      <td>{descripcion}</td>
+      <td>{estado}</td>
       <td>
         <NavLink className="icon-pencil"></NavLink>
       </td>
