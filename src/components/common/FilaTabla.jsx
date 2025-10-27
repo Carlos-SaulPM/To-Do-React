@@ -10,18 +10,21 @@ const FilaTabla = ({ tarea }) => {
       <td>{descripcion}</td>
       <td>{estado}</td>
       <td>
-        <NavLink className="icon icon-pencil" to={`/editar/:id${id}`}></NavLink>
+        <NavLink
+          className="icon icon-pencil"
+          to={`/tarea/editar/${id}`}
+        ></NavLink>
       </td>
       <td>
         <NavLink
           className="icon icon-trash"
-          to={`/eliminar/:id${id}`}
+          to={`/tarea/eliminar/${id}`}
         ></NavLink>
       </td>
       <td>
         <NavLink
           className="icon icon-check"
-          to={`/finalizada/:id${id}`}
+          to={`/tarea/finalizada/${id}`}
         ></NavLink>
       </td>
     </tr>

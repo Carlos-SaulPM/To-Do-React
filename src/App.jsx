@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./routes/Home";
 import TablaDeTareas from "./components/conjuntos/TablaDeTareas";
+import TareaRoutes from "./routes/TareaRoutes";
 
 function App() {
   let tablaTareas = <TablaDeTareas />; //Utilizando la misma referencia para las subrutas "/".
@@ -15,14 +16,7 @@ function App() {
             <Route index element={tablaTareas} />
             <Route path=":estado" element={tablaTareas} />
           </Route>
-          <Route
-            path="/agregar"
-            element={
-              <>
-                <h3>Agregando tarea</h3>
-              </>
-            }
-          ></Route>
+          {TareaRoutes()}
         </Route>
       </Routes>
     </>

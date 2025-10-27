@@ -14,7 +14,7 @@ const Buscador = ({ name, OnSubmit }) => {
         placeholder="Buscar tarea"
       />
 
-      <button type="submit" style={botonBusqueda}>
+      <button type="submit" className="boton">
         Buscar
       </button>
     </form>

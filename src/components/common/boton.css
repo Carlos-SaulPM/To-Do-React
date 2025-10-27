@@ -1,4 +1,4 @@
-button {
+.boton {
   min-width: 10rem;
   min-height: 2.8rem;
   border-radius: 0.7rem;
@@ -11,6 +11,6 @@ button {
   transition: background 1s;
 }
 
-button:hover {
+.boton:hover {
   background-color: var(--site-boton-hover-green);
 }

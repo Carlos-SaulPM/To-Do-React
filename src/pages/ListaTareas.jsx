@@ -1,9 +1,10 @@
-import Boton from "../components/common/Boton";
+import "../components/common/Boton";
 import Buscador from "../components/common/Buscador";
 import "./listaTareas.css";
 import GrupoRadioBotones from "../components/conjuntos/GrupoRadioBotones";
+import { Link } from "react-router";
 
-const ListaTareas = ({ agregar }) => {
+const ListaTareas = () => {
   const rutasNav = {
     todos: {
       value: "todos",
@@ -30,7 +31,17 @@ const ListaTareas = ({ agregar }) => {
       <h1>Lista de tareas</h1>
       <br />
       <section className="contenedor-botones">
-        <Boton OnClick={agregar} tituloBoton="Agregar tarea" />
+        <Link
+          to={"tarea/agregar"}
+          className="boton"
+          style={{
+            alignContent: "center",
+            textAlign: "center",
+            textDecoration: "none",
+          }}
+        >
+          Agregar tarea
+        </Link>
         <Buscador />
       </section>
       <GrupoRadioBotones rutas={rutasNav} name="tareas" />
