@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import FilaTabla from "../common/FilaTabla";
 import "./tablaDeTareas.css";
-import { useTareas } from "../../hooks/useTareas";
 import { useParams } from "react-router";
+import TareaContext from "../../context/TareasContext";
 
 const estadosDeTareas = {
   por_hacer: "Por hacer",
@@ -11,7 +11,7 @@ const estadosDeTareas = {
 };
 
 const TablaDeTareas = () => {
-  const [tareasFiltradas, filtrarTareasPorEstado] = useTareas();
+  const { tareasFiltradas, filtrarTareasPorEstado } = useContext(TareaContext);
   const { estado } = useParams();
 
   useEffect(() => {

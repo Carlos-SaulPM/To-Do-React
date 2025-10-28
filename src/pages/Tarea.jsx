@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router";
 import { Outlet } from "react-router";
 const Tarea = () => {
   const { accionTarea, id } = useParams();
-  console.log(accionTarea, id);
   let tituloDeLaAccionTarea =
     accionTarea.slice(0, 1).toUpperCase() +
     accionTarea.substring(1) +
